@@ -1,0 +1,11 @@
+<h1 class="title">Welcome to {{title}}!</h1>
+<wsb-home></wsb-home>
+<div class="columns">
+    <div class="column">
+        <wsb-counter (countChange)="onCountChange($event)"></wsb-counter>
+    </div>
+    <div class="column">
+        <wsb-counter [count]="10"></wsb-counter>
+    </div>
+</div>
+<router-outlet></router-outlet>

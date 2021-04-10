@@ -1,12 +1,16 @@
-import { Directive, ElementRef } from "@angular/core";
+import { Directive, ElementRef, Input, OnInit } from "@angular/core";
 
 @Directive({
     selector: '[wsb-hightlight]'
 })
 
-export class HightlightDirective{
-constructor(public el:ElementRef){
-    this.el.nativeElement.style.background = 'yellow';
-    this.el.nativeElement.style.fontWeight = 'bold';
-}
+export class HightlightDirective implements OnInit {
+    @Input() public color: string = 'yellow';
+    constructor(public el: ElementRef) {
+
+    }
+    ngOnInit(): void {
+        this.el.nativeElement.style.background = this.color;
+        this.el.nativeElement.style.fontWeight = 'bold';
+    }
 }

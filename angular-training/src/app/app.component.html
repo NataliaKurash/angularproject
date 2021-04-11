@@ -1,5 +1,11 @@
 <h1 class="title">Welcome to {{title}}!</h1>
-<wsb-home></wsb-home>
+<nav>
+    <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/counter">Counter</a></li>
+    </ul>
+</nav>
+<!-- <wsb-home></wsb-home>
 <div class="columns">
     <div class="column">
         <h2 class="subtitle">Pipe</h2>
@@ -40,5 +46,5 @@
     <div class="column">
         <wsb-counter [count]="10"></wsb-counter>
     </div>
-</div>
+</div> -->
 <router-outlet></router-outlet>

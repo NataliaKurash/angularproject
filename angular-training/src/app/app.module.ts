@@ -10,12 +10,16 @@ import { HightlightDirective } from './hightlight/hightlight.component';
 import { HomeComponent } from './home/home.component';
 import { UsersService } from './users/users.service';
 import {HttpClientModule} from '@angular/common/http'
+import { TitlePipe } from './title/title.pipe';
+import { PageNotFoundComponent } from './PageNotFoundComponent/page-not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
     HomeComponent,
     HightlightDirective,
+    TitlePipe,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

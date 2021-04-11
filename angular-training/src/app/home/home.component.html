@@ -1,7 +1,7 @@
 <h4>Home</h4>
 <img src="assets/house.jfif" alt="modern house">
 <ul class="box">
-    <li *ngFor="let user of users; let index = index; odd as nieparzysty; even as parzysty">
+    <li *ngFor="let user of users | async; let index = index; odd as nieparzysty; even as parzysty">
         {{index+1}}. {{user.name}} is {{user.age}}
     </li>
 </ul>

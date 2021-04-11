@@ -5,7 +5,7 @@ import { UsersService } from "../users/users.service";
     templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit, OnDestroy {
-    public users: any = [];
+    public users: any = this.usersService.getUsers();
     ngOnDestroy(): void {
     }
     constructor(public usersService: UsersService) {
@@ -13,9 +13,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
     public ngOnInit(): void {
         console.log('HomeCOmponent jest gotowy');
-        this.usersService.getUsers()
-            .then(response => {
-                this.users = response;
-            })
+        // this.usersService.getUsers()
+        //     .then(response => {
+        //         this.users = response;
+        //     });
+        
     }
 }

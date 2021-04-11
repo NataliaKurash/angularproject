@@ -9,6 +9,7 @@ export class AppComponent {
   public title = 'Angular project';
   public isToggled: boolean = false;
   public userName: string = 'John';
+  public currentDate: Date = new Date();
 
   public onCountChange(count:number){
     console.log(`ta wartośc się znienia`, count);
